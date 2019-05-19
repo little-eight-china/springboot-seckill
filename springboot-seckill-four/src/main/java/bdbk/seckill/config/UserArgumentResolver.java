@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * 给controller提供自定义形参SeckillUser
+ * 登录获取token，保存用户信息
  */
 @Service
 public class UserArgumentResolver implements HandlerMethodArgumentResolver {

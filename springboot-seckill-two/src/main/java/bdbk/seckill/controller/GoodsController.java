@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ *  商品控制类
+ */
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {

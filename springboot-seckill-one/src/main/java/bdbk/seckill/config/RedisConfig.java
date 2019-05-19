@@ -12,8 +12,7 @@ import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * @author little_eight
- * @since 2019/3/19
+ *  redis配置
  */
 @Configuration
 public class RedisConfig {
@@ -38,21 +37,4 @@ public class RedisConfig {
         template.afterPropertiesSet();
         return template;
     }
-
-    /**
-     * RedisTemplate序列化配置
-     *
-     * @return RedisTemplate
-     */
-//    @Bean
-//    public RedisTemplate<String, SeckillUser> priceDistributorTemplate(final RedisConnectionFactory redisConnectionFactory) {
-//        RedisTemplate<String, SeckillUser> template = new RedisTemplate<>();
-//        template.setKeySerializer(new StringRedisSerializer());
-//        template.setHashKeySerializer(new StringRedisSerializer());
-//        template.setHashValueSerializer(new StringRedisSerializer());
-//        template.setConnectionFactory(redisConnectionFactory);
-//        template.afterPropertiesSet();
-//        return template;
-//    }
-
 }

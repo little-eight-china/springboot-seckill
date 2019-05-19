@@ -15,6 +15,10 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+
+/**
+ *  秒杀控制层
+ */
 @Controller
 @RequestMapping("/seckill")
 public class SeckillController {
@@ -30,6 +34,7 @@ public class SeckillController {
 
 	@Autowired
 	private SeckillService seckillService;
+
 	/**
 	 * 开始秒杀
 	 */
@@ -50,7 +55,6 @@ public class SeckillController {
 		}
 
 		//判断是否已经秒杀到了,直接跳转订单详情
-		// TODO 要修改先跳转到失败页面才行，不能直接跳订单详情
 		UserOrder userOrder = orderService.getUserOrderByUserIdGoodsId(user.getId(), goodsId);
 		if(userOrder != null) {
 			OrderInfo orderInfo = seckillService.getOrderInfoByUserIdGoodsId(userOrder.getUserId(), userOrder.getGoodsId());

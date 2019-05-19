@@ -30,6 +30,23 @@
 ### 拦截器
 * 拦截不携带token的非法请求
 
+##主要代码说明
 
-    
+### 登录校验
+* 使用HandlerMethodArgumentResolver实现token校验跟保存用户信息到redis
+* 用户密码用MD5校验
+* 自定义注解@isMobile，手机号码校验
 
+## 启动说明
+* 执行sql文件夹的建表sql
+* 启动项目前，启动好数据库跟redis
+* 修改application.yml里以上相关连接信息
+* 运行run方法，打开http://localhost:8080
+
+## 部分截图
+
+### 登录界面
+![one-login](https://github.com/little-eight-china/image/blob/master/springboot-seckill/one-login.jpg?raw=true)
+
+### 商品列表
+![one-goodsList](https://github.com/little-eight-china/image/blob/master/springboot-seckill/one-goodsList.jpg?raw=true)

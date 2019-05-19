@@ -10,8 +10,6 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * redis工具类
- * @author little_eight
- * @since 2019/3/19
  */
 @Component
 public class RedisUtil {
@@ -22,7 +20,6 @@ public class RedisUtil {
          * 指定缓存失效时间
          * @param key 键
          * @param time 时间(秒)
-         * @return
          */
         public boolean expire(String key, long time) {
             try {

@@ -25,6 +25,10 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.filefilter.FileFilterUtils;
+
+/**
+ *  商品控制类
+ */
 @Controller
 @RequestMapping("/goods")
 public class GoodsController {

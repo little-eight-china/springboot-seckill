@@ -7,6 +7,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 import java.util.List;
 
+/**
+ *  拦截器配置
+ */
 @Configuration
 public class WebConfig extends WebMvcConfigurerAdapter {
 

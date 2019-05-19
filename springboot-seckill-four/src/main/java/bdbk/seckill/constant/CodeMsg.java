@@ -1,5 +1,8 @@
 package bdbk.seckill.constant;
 
+/**
+ *  自定义错误码类
+ */
 public enum  CodeMsg {
 	//通用的错误码
 	SUCCESS(0,"请求成功"),

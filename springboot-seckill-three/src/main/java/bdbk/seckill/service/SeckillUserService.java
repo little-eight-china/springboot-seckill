@@ -15,6 +15,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import java.util.UUID;
 
+/**
+ *  用户逻辑层
+ */
 @Service
 public class SeckillUserService {
 
@@ -37,6 +40,7 @@ public class SeckillUserService {
 		}
 		//验证密码
 		String dbPass = user.getPassword();
+		// 密码只用md5加密一层
 		String calcPass = MD5Util.getMD5(formPass+user.getSalt());
 		if(!calcPass.equals(dbPass)) {
 			return ReturnDataVo.error(CodeMsg.PASSWORD_ERROR.getMsg());

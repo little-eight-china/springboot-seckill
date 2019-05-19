@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+/**
+ *  商品逻辑层
+ */
 @Service
 public class GoodsService {
 	
@@ -22,6 +25,9 @@ public class GoodsService {
 		return goodsDao.getGoodsVoByGoodsId(goodsId);
 	}
 
+	/**
+	 * 减库存 下订单 写入秒杀订单
+	 */
 	void reduceStock(GoodsVo goods) {
 		SeckillGoods g = new SeckillGoods();
 		g.setGoodsId(goods.getId());

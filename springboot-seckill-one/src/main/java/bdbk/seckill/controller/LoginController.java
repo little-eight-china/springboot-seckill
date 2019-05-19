@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *  登录
+ */
 @Controller
 @RequestMapping("/")
 public class LoginController {
@@ -25,11 +28,14 @@ public class LoginController {
     public String toLogin() {
         return "login";
     }
-    
+
+    /**
+     *  登录校验
+     */
     @RequestMapping("validator")
     @ResponseBody
     public ReturnDataVo validator(HttpServletResponse response, LoginVo loginVo) {
-    	log.info(loginVo.toString());
+    	log.info("登录信息：", loginVo.toString());
     	return userService.login(response, loginVo);
     }
 }

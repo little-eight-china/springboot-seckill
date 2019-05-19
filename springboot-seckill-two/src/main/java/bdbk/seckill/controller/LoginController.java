@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 
+/**
+ *  登录
+ */
 @Controller
 @RequestMapping("/")
 public class LoginController {
